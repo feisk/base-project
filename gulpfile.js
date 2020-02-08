@@ -169,3 +169,9 @@ exports.default = series(
     processLibsJs,
     serve
 );
+
+exports.build = series(
+    clean,
+    parallel(compileStyles, compilePug, processJs, copyImages, copyFonts),
+    processLibsJs
+);

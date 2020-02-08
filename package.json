@@ -4,6 +4,7 @@
   "description": "Development project",
   "scripts": {
     "start": "gulp",
+    "build": "gulp build",
     "lint-staged": "lint-staged"
   },
   "author": "Fedor Iskandarov",
