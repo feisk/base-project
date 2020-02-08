@@ -1,0 +1,132 @@
+@mixin mobileSmaller {
+    @media (max-width: $screen-xs) {
+        @content;
+    }
+}
+
+@mixin mobileSmall {
+  @media (max-width: $screen-s) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin mobileLandscape {
+  @media (max-width: $screen-sm) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin tabletBig {
+  @media screen and (max-width: $screen-md - 1) {
+    @content;
+  }
+}
+
+@mixin desktopSmallHeight {
+  @media screen and (min-width: $screen-md) and (max-height: 850px) {
+    @content;
+  }
+}
+
+@mixin desktopSmaller {
+  @media screen and (max-width: $screen-lg - 1) {
+    @content;
+  }
+}
+
+@mixin desktopSmall {
+  @media screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin desktopBig {
+  @media screen and (max-width: $screen-xxl - 1) {
+    @content;
+  }
+}
+
+@mixin desktopBigger {
+  @media screen and (max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin desktopBiggest {
+  @media screen and (max-width: $screen-xxxl) {
+    @content;
+  }
+}
+
+@mixin font($fz: 16px, $lh: 1.5, $fw: 400, $ls: normal) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin pseudoBefore($ps: absolute) {
+
+  &:before {
+    content: '';
+    position: $ps;
+    @content;
+  }
+}
+
+@mixin pseudoAfter($ps: absolute) {
+
+  &:after {
+    content: '';
+    position: $ps;
+    @content;
+  }
+}
+
+@mixin hfa($hc: $link-color-hover, $fc: $link-color-hover, $ac: $link-color-hover) {
+
+  &:hover {
+    color: $hc;
+  }
+
+  &:focus {
+    color: $fc;
+  }
+
+  &:active {
+    color: $ac;
+  }
+}
+
+@mixin bgc-hfa($hc: $main_color_light, $fc: $main_color_light, $ac: $main_color_light) {
+
+  &:hover {
+    background-color: $hc;
+  }
+
+  &:focus {
+    background-color: $fc;
+  }
+
+  &:active {
+    background-color: $ac;
+  }
+}

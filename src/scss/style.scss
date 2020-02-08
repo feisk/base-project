@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'animations';
+@import 'mixins';
+@import 'fonts';
+@import 'main';
+
+@import '../blocks/button';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
+
+@import '../pages/index/index';

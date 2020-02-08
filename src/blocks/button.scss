@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  line-height: 1;
+  color: currentColor;
+  text-decoration: none;
+  white-space: nowrap;
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  user-select: none;
+  cursor: pointer;
+
+  &--action {
+    min-width: 102px;
+    min-height: 32px;
+    padding: 7px 18px;
+    color: $white;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 18px;
+    background-color: $main_color;
+    @include bgc-hfa();
+
+    &-big {
+      min-width: 200px;
+      min-height: 56px;
+      font-size: 17px;
+      letter-spacing: 0.3px;
+      border-radius: 80px;
+    }
+  }
+}

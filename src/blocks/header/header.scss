@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  min-width: $screen-xl; //temp
+  @include font(15px, 18px);
+  color: $black;
+  background-color: $white;
+  box-shadow: 0 1px 0 rgba($black, .1);
+
+  &__container {
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 0 7px;
+  }
+
+  &__logo {
+    width: 127px;
+    height: 34px;
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-right: 85px;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+
+    &-link {
+      padding: 3px;
+      @include hfa();
+    }
+  }
+}

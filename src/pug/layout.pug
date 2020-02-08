@@ -1,0 +1,33 @@
+//- Стандартный шаблон страницы
+include mixins.pug
+
+doctype html
+html(class='no-js', lang='en')
+
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+
+    block meta
+
+    block head
+      link(rel='stylesheet', href='css/style.min.css')
+      script.
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  body.body
+    noscript Please enable javascript in your browser.
+
+    block header
+      include ../blocks/header/header
+
+    main.main
+      block content
+
+    block footer
+      include ../blocks/footer/footer
+
+    block page-bottom
+
+    script(src='js/script.min.js')

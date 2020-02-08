@@ -1,0 +1,48 @@
+.footer {
+  @include font(16px, 24px, 500, .15px);
+  color: #161922;
+
+  &__container {
+    padding: 151px 0 103px 98px;
+    align-items: flex-start;
+  }
+
+  &__inner {
+    display: flex;
+    padding-bottom: 67px;
+  }
+
+  &__col {
+    &:not(:last-child) {
+      margin-right: 190px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 11px;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__link {
+    padding-right: 3px;
+    @include hfa($link-color-hover, currentColor);
+  }
+
+  &__copyright {
+    text-transform: uppercase;
+  }
+}
