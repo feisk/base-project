@@ -105,7 +105,8 @@ exports.processLibsJs = processLibsJs;
 
 function copyImages() {
     return src([
-        dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif,mp4}',
+        dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif,ico,mp4}',
+        dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,ico,mp4}',
         dir.src + 'blocks/**/img/*.{jpg,jpeg,png,svg,webp,gif,mp4}',
         dir.src + 'blocks/**/**/img/*.{jpg,jpeg,png,svg,webp,gif,mp4}',
         dir.src + 'pages/**/img/*.{jpg,jpeg,png,svg,webp,gif,mp4}',
@@ -152,9 +153,11 @@ function serve() {
     watch(dir.src + 'js/script.js', processJs);
     watch(dir.src + 'js/script.min.js', processLibsJs);
     watch([
-        dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}',
+        dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif,ico}',
+        dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,ico}',
         dir.src + 'blocks/**/img/*.{jpg,jpeg,png,svg,webp,gif}',
-        dir.src + 'pages/**/img/*.{jpg,jpeg,png,svg,webp,gif}'
+        dir.src + 'blocks/**/**/img/*.{jpg,jpeg,png,svg,webp,gif}',
+        dir.src + 'pages/**/img/*.{jpg,jpeg,png,svg,webp,gif}',
     ], copyImages);
     watch([
         dir.build + '*.html',
