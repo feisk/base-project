@@ -58,17 +58,20 @@ img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  //opacity: 0;
-  //animation: opacity-in 75ms ease forwards;
+}
+
+picture {
+  display: flex;
+  align-items: flex-start;
 }
 
 .body {
   width: 100%;
-  min-width: $screen-xl; //temp
+  min-width: $screen-xxs;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: $white;
+  background-color: $bg-color-main;
   overflow-x: hidden;
 }
 
@@ -79,6 +82,11 @@ img {
   padding-top: 50px;
 }
 
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
 .container {
   position: relative;
   display: flex;
@@ -86,6 +94,14 @@ img {
   width: calc(100% - 64px);
   max-width: $content-width;
   margin: 0 auto;
+
+  @include tablet {
+    width: calc(100% - 192px);
+  }
+
+  @include mobile {
+    width: calc(100% - 32px);
+  }
 }
 
 .no-scroll {
@@ -110,6 +126,11 @@ img {
   @include font(20px, 29px, 400, 8.15px);
   color: #C8C4C4;
   text-transform: uppercase;
+
+  @include mobile {
+    margin-bottom: 18px;
+    font-size: 17px;
+  }
 }
 
 .text-bold {
@@ -118,4 +139,18 @@ img {
 
 .text-medium {
   font-weight: 500;
+}
+
+.hide-small-mobile-screen {
+
+  @include mobileSmall {
+    display: none;
+  }
+}
+
+.hide-smaller-mobile-screen {
+
+  @include mobileSmaller {
+    display: none;
+  }
 }

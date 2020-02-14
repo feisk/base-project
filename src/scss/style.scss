@@ -1,3 +1,9 @@
+// 
+// example add lib.css
+// you need install lib - use 'npm install lib' and then if you need import lib.js in to gulpfile - use function processLibsJs
+// 
+// @import '../../node_modules/swiper/css/swiper.min';
+
 @import 'variables';
 @import 'animations';
 @import 'mixins';
