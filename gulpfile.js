@@ -95,6 +95,8 @@ exports.processJs = processJs;
 
 function processLibsJs() {
     return src([
+        // example add libs patch:
+        // 'node_modules/jquery/dist/jquery.min.js',
         dir.src + 'js/script.min.js',
     ])
         .pipe(concat('script.min.js'))
