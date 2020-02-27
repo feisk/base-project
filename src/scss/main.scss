@@ -95,10 +95,6 @@ picture {
   max-width: $content-width;
   margin: 0 auto;
 
-  @include tablet {
-    width: calc(100% - 192px);
-  }
-
   @include mobile {
     width: calc(100% - 32px);
   }

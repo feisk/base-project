@@ -31,11 +31,9 @@
     @include tablet {
       align-content: flex-start;
       flex-wrap: wrap;
-      width: calc(100% - 64px);
 
       @include mobile {
         justify-content: space-between;
-        width: calc(100% - 32px);
       }
     }
   }
