@@ -95,11 +95,11 @@ exports.processJs = processJs;
 
 function processLibsJs() {
     return src([
-        // 
+        //
         // example add libs patch
         // you need install lib - use 'npm install lib' and then if you need import lib.css in to src/scss/style.scss
-        // 
-        // 'node_modules/jquery/dist/jquery.min.js',
+        //
+        'node_modules/jquery/dist/jquery.min.js',
         // 'node_modules/swiper/js/swiper.min.js'
         dir.src + 'js/script.min.js',
     ])

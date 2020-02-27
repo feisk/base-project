@@ -3,6 +3,19 @@
   &__container {
     flex-direction: row;
     padding-top: 28px;
+
+    @include desktopSmaller {
+      flex-direction: column;
+      align-items: center;
+
+      @include tablet {
+        align-items: flex-start;
+
+        @include mobile {
+          align-items: center;
+        }
+      }
+    }
   }
 
   &__content {
@@ -13,20 +26,81 @@
     max-width: 600px;
     padding-top: 120px;
     padding-right: 30px;
+    padding-bottom: 120px;
+
+    @include desktopSmaller {
+      order: 1;
+      padding: 44px 0 0;
+
+      @include mobile {
+        max-width: 500px;
+      }
+    }
   }
 
   &__title {
     margin-bottom: 40px;
     @include font(60px, 80px, 700, -.5px);
+
+    @include mobile {
+      margin-bottom: 24px;
+      @include font(28px, 40px, 700, .15px);
+    }
   }
 
   &__text {
     margin-bottom: 50px;
     @include font(18px, 26px, 400, .5px);
+
+    @include tablet {
+      margin-bottom: 32px;
+
+      @include mobile {
+        margin-bottom: 46px;
+        @include font(16px, 24px, 500, .15px);
+      }
+    }
+
+    &-modal {
+      font-weight: 500;
+      color: $main_color_light;
+      @include hfa($main_color, $main_color, $main_color);
+      background: linear-gradient(currentColor, currentColor) center 90%/100% 1px no-repeat;
+      transition: background-size 150ms ease, color 150ms ease;
+
+      &:hover {
+        background-size: 100% 0;
+      }
+    }
+  }
+
+  &__button {
+
+    @include mobile {
+      align-self: center;
+    }
   }
 
   &__img {
     flex-shrink: 0;
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
+
+    @media (max-width: $screen-xl - 50) {
+      max-width: 46vw;
+      align-self: center;
+
+      @include desktopSmaller {
+        max-width: 580px;
+
+        @include tablet {
+          max-width: 634px;
+
+          @include mobile {
+            max-width: 450px;
+          }
+        }
+      }
+    }
   }
 }
