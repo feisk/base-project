@@ -11,6 +11,12 @@ ready(function(){
   setModalShow();
 });
 
+const preventWindowScroll = (e, scrollPos) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.scrollTo(0, scrollPos);
+};
+
 const setMobileMenu = () => {
   const body = $('body');
   const header = $('header.header');
